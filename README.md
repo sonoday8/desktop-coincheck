@@ -18,7 +18,7 @@ make.shをごにょごにょして、好きに作成。
 
 ## Licence
 
-[BSD License (3-clause BSD License)]()
+[BSD License (3-clause BSD License)](https://github.com/sonoday8/desktop-coincheck/blob/master/LICENSE)
 
 ## Author
 
