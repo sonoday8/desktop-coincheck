@@ -1,0 +1,1 @@
+electron-packager . coincheck --platform=darwin --arch=x64 --version=1.4.13 --icon=CoincheckLogo.icns

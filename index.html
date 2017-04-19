@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>coincheck</title>
+    <link href="./css/main.css" rel="stylesheet">
+    <script type="text/javascript">
+        window.jQuery = window.$ = require('./js/jquery-3.2.1.min.js');
+        var main = require('electron').remote.require("./main");
+        function getLast() {
+            main.getLast(
+                function (last) {
+                    rate = $('.rate').val();
+                    $('.last').text(last);
+                    $('.amount').text(Math.floor(last * rate));
+                });
+        }
+
+        $(document).ready(function () {
+            getLast();
+            setInterval(function(){
+                getLast();
+            },20000);
+        });
+    </script>
+
+</head>
+<body>
+<span class="amount" style="size: 16px;">0</span> / <span class="last">0</span>
+<br>
+<input type="text" size="7" class="rate" name="rate" value="0">
+<button onclick="getLast()">get</button>
+</body>
+</html>
